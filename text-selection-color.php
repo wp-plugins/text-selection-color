@@ -1,7 +1,7 @@
 <?php
  /*
  Plugin Name: Text Selection Color
- Version: 1.0
+ Version: 1.1
  Plugin URI: http://nazmurrahman.com/text-selection-color-wordpress-plugin/
  Author: Nazmur Rahman
  Author URI: http://nazmurrahman.com/
@@ -48,11 +48,11 @@ function tsc_enqueue_styles(){
 $style_html = '<style type="text/css">
 ::selection{
 color: '.get_option('text-color').';
-background-color: '.get_option('text-bg-color').';
+background-color: '.get_option('text-bg-color').' !important;
 }
 ::-moz-selection{
 color: '.get_option('text-color').';
-background-color: '.get_option('text-bg-color').';
+background-color: '.get_option('text-bg-color').' !important;
 }
 </style>';
 echo $style_html;
