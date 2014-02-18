@@ -47,11 +47,11 @@ add_action( 'wp_enqueue_scripts', 'tsc_enqueue_styles' );
 function tsc_enqueue_styles(){
 $style_html = '<style type="text/css">
 ::selection{
-color: '.get_option('text-color').';
+color: '.get_option('text-color').' !important;
 background-color: '.get_option('text-bg-color').' !important;
 }
 ::-moz-selection{
-color: '.get_option('text-color').';
+color: '.get_option('text-color').' !important;
 background-color: '.get_option('text-bg-color').' !important;
 }
 </style>';
