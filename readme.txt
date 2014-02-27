@@ -1,5 +1,5 @@
 === Text Selection Color ===
-Contributors: Nazmur
+Contributors: nazmur.r
 Tags: text, selection, highlight, color
 Requires at least: 3.0
 Tested up to: 3.7.1
