@@ -1,7 +1,7 @@
 <?php
  /*
  Plugin Name: Text Selection Color
- Version: 1.1
+ Version: 1.2
  Plugin URI: http://nazmurrahman.com/text-selection-color-wordpress-plugin/
  Author: Nazmur Rahman
  Author URI: http://nazmurrahman.com/
@@ -9,7 +9,7 @@
  */
 
  global $wp_version;
- $exit_msg='Text Selection Color requires WordPress 3.0 or newer. <a href="http://codex.wordpress.org/Upgrading_WordPress">Please update!</a>';
+ $exit_msg=__('Text Selection Color requires WordPress 3.0 or newer. <a href="http://codex.wordpress.org/Upgrading_WordPress">Please update!</a>','text-selection-color');
  if (version_compare($wp_version,"3.0","<"))
  {
      exit ($exit_msg);
@@ -30,6 +30,14 @@
          add_action( 'admin_enqueue_scripts', 'tsc_enqueue_farbtastic_color_picker' );
 
     }
+
+    function tsc_action_init(){
+    // Localization
+    load_plugin_textdomain('text-selection-color', false, basename( dirname( __FILE__ ) ) . '/languages' );
+    }
+
+    // Add actions
+add_action('init', 'tsc_action_init');
 
 function tsc_enqueue_color_picker() {
     wp_enqueue_style( 'wp-color-picker' );
@@ -69,13 +77,13 @@ add_submenu_page('options-general.php','Text Selection Color Settings','Text Sel
 
 function tsc_display_settings() {
 $html = '<div class="wrap"><form action="options.php" method="post" name="options">
-<h2>Text Selection Color Settings</h2>
+<h2>'.__('Text Selection Color Settings','text-selection-color').'</h2>
 ' . wp_nonce_field('update-options') . '
 <table class="form-table" width="100%" cellpadding="10">
 <tbody>
 <tr>
 <td scope="row" align="left" style="width: 13%;">
-<label>Text Color</label>
+<label>'.__('Text Color','text-selection-color').'</label>
 </td>
 <td>
 <input type="text" value="'.get_option('text-color').'" class="text-color" name="text-color" data-default-color="#fff" style="background-color: '.get_option('text-color').'"/>
@@ -84,7 +92,7 @@ $html = '<div class="wrap"><form action="options.php" method="post" name="option
 </tr>
 <tr>
 <td scope="row" align="left" style="width: 13%;">
- <label>Text Background Color</label>
+ <label>'.__('Text Background Color','text-selection-color').'</label>
 </td>
 <td>
 <input type="text" value="'.get_option('text-bg-color').'" class="text-bg-color" name="text-bg-color" data-default-color="#0982fd" style="background-color: '.get_option('text-bg-color').'"/>
@@ -93,13 +101,13 @@ $html = '<div class="wrap"><form action="options.php" method="post" name="option
 </tr>
 </tbody>
 </table>
-<h3>Preview</h3>
+<h3>'.__('Preview','text-selection-color').'</h3>
 <p><span class="preview-text" style="font-size: 16px; background-color: '.get_option('text-bg-color').'; color: '.get_option('text-color').';">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</span></p>
 <input type="hidden" name="action" value="update" />
 
  <input type="hidden" name="page_options" value="text-color,text-bg-color" />
 
- <input type="submit" name="Submit" value="Save" class="button button-primary"/></form>
+ <input type="submit" name="Submit" value="'.__('Save','text-selection-color').'" class="button button-primary"/></form>
 
 </div>';
 

@@ -3,7 +3,7 @@ Contributors: nazmur.r
 Tags: text, selection, highlight, color
 Requires at least: 3.0
 Tested up to: 3.8.1
-Stable tag: 1.1
+Stable tag: 1.2
 
 Text Selection Color plugin helps to change the color of the selected text in the website easily.
 
@@ -16,6 +16,9 @@ Features:
 * User can change text color and text background color from plugin settings page with color picker.
 * Changes can be seen as preview in the plugin settings page.
 
+= Translators =
+
+* Bengali (bn) - [Nazmur Rahman](http://nazmurrahman.com/)
 
 == Installation ==
 
@@ -43,6 +46,11 @@ Please leave a comment in the plugin homepage about your query or opinion [http:
 2. Selection color preview after changing colors
 
 == Changelog ==
+
+= 1.2 =
+
+* Translation Ready.
+* Bengali Translation added.
 
 = 1.1 =
 
