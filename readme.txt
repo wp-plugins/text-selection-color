@@ -2,8 +2,8 @@
 Contributors: nazmur.r
 Tags: text, selection, highlight, color
 Requires at least: 3.0
-Tested up to: 3.9.1
-Stable tag: 1.4
+Tested up to: 4.0
+Stable tag: 1.5
 
 Text Selection Color plugin helps to change the color of the selected text in the website easily.
 
@@ -48,6 +48,10 @@ Please leave a comment in the plugin homepage about your query or opinion [http:
 2. Selection color preview after changing colors
 
 == Changelog ==
+
+= 1.5 =
+
+* Version compatibility update.
 
 = 1.4 =
 
