@@ -1,7 +1,7 @@
 <?php
  /*
  Plugin Name: Text Selection Color
- Version: 1.5
+ Version: 1.6
  Plugin URI: http://nazmurrahman.com/text-selection-color-wordpress-plugin/
  Author: Nazmur Rahman
  Author URI: http://nazmurrahman.com/
